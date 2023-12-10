@@ -5,10 +5,10 @@ def split_data(data, target, test_size=0.3, random_state=42):
     return X_train, X_test, y_train, y_test
 
 # Assuming 'data' is your dataset and 'target' is what you want to predict
-data = []
-target = []
+data = [...]
+target = [...]
 
 X_train, X_test, y_train, y_test = split_data(data, target)
 
-print("Training set:", X_train)
-print("Test set:", X_test)
+print("Training set size:", len(X_train))
+print("Test set size:", len(X_test))
