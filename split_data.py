@@ -1,9 +1,14 @@
-import pandas as pd
 from sklearn.model_selection import train_test_split
 
-# Assuming that df is your DataFrame
-df = pd.read_csv('your_data.csv')  # replace 'your_data.csv' with your actual csv file
+def split_data(data, target, test_size=0.3, random_state=42):
+    X_train, X_test, y_train, y_test = train_test_split(data, target, test_size=test_size, random_state=random_state)
+    return X_train, X_test, y_train, y_test
 
-train, test = train_test_split(df, test_size=0.3)
+# Assuming 'data' is your dataset and 'target' is what you want to predict
+data = []
+target = []
 
-# Now, 'train' and 'test' are your training and testing data.
+X_train, X_test, y_train, y_test = split_data(data, target)
+
+print("Training set:", X_train)
+print("Test set:", X_test)
